@@ -1,0 +1,6 @@
+/dist
+/node_modules
+/public
+.babelrc
+webpack.config.js
+src/index.js
