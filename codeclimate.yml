@@ -1,0 +1,5 @@
+
+exclude_patterns:
+- "webpack.config.js"
+- "**/__tests__/**"
+- "**/__mocks__/**"
