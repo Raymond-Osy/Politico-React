@@ -1,0 +1,63 @@
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logo {
+    color:  #2f7a17;
+    font-weight: bold;
+}
+.main-info h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000;
+}
+.main-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #000;
+}
+.main-info a {
+    display: inline-block;
+    background-color: #2f7a17;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 25%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.main-info a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.main-info a span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.main-info a:hover span {
+    padding-right: 25px;
+}
+  
+.main-info a:hover span:after {
+    opacity: 1;
+    right: 0;
+}
