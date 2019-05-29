@@ -1,0 +1,33 @@
+.footer-container {
+    background-color: #2f7a17;
+    color: #fff;
+}
+.footer-item-container {
+    display: flex;
+    align-items: stretch;
+    margin: 0 75px;
+}
+.abt-header {
+    text-align: center;
+    padding: 10px;
+}
+.abt-body {
+    text-align: center;
+    padding: 10px;
+}
+.footer-container-2 {
+    display: flex;
+    height: 70px;
+    color: #FFFFFF;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.align-3 {
+    flex-grow: 3;
+}
+.align-4 {
+    flex-grow: 4;
+}

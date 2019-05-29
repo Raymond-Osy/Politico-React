@@ -6,7 +6,10 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   moduleFileExtensions: ['js', 'json', 'jsx'],
-
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/src/__mocks__/assetsTransformer.js',
+    '\\.(css|less|scss)$': 'identity-obj-proxy'
+  },
   setupFiles: ['<rootDir>/enzyme.config.js'],
 
   testEnvironment: 'jsdom',
