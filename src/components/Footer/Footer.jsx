@@ -18,19 +18,19 @@ const Footer = () => (
                 </div>
             </div>
             <div className="align-4">
-                <div class="abt-body">
+                <div className="abt-body">
                     <img src={consent}/>
                     <p>Fill in your credentials in the designated fields</p>
                 </div>
             </div>
             <div className="align-3">
-                <div class="abt-body">
+                <div className="abt-body">
                     <img src={vote}/>
                     <p>Select & vote your prefered candidate!</p>
                 </div>
             </div>
         </div>
-        <div class="footer-container-2">
+        <div className="footer-container-2">
                 <p>Copyright &copy; 2018, Raymond Akalonu.</p>
             </div>
     </footer>

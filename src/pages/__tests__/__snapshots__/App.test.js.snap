@@ -5,18 +5,280 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        <h1>
-          Welcome to Politico app....Heads up, It still under construction
-        </h1>
+      <div
+        class="custom-container"
+      >
+        <nav
+          class="row"
+        >
+          <div
+            class="logo-div"
+          >
+            <a
+              href="index.html"
+            >
+              <h1>
+                Politico
+              </h1>
+            </a>
+          </div>
+          <div
+            class="signup-signin-div"
+          >
+            <h4>
+              <a
+                href="signup.html"
+              >
+                Sign Up
+              </a>
+              <span
+                class="m-side"
+              >
+                |
+              </span>
+              <a
+                href="signin.html"
+              >
+                Login
+              </a>
+            </h4>
+          </div>
+        </nav>
+        <section
+          class="container"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="main-info col-100"
+            >
+              <h1>
+                Welcome to 
+                <span
+                  class="logo"
+                >
+                  Politico
+                </span>
+                , where the Citizens speak!
+              </h1>
+              <p>
+                What more could anyone ask for? It's convinient, free and transparent!
+              </p>
+              <a
+                href="signin.html"
+                id="bigRegisterBtn"
+              >
+                <span>
+                  Get Started
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <footer
+          class="footer-container"
+        >
+          <div
+            class="abt-header"
+          >
+            <h2>
+              How Do I Vote?
+            </h2>
+          </div>
+          <div
+            class="footer-item-container"
+          >
+            <div
+              class="align-3"
+            >
+              <div
+                class="abt-body"
+              >
+                <img
+                  src="test-file-stub"
+                />
+                <p>
+                  Click the Get Started button
+                </p>
+              </div>
+            </div>
+            <div
+              class="align-4"
+            >
+              <div
+                class="abt-body"
+              >
+                <img
+                  src="test-file-stub"
+                />
+                <p>
+                  Fill in your credentials in the designated fields
+                </p>
+              </div>
+            </div>
+            <div
+              class="align-3"
+            >
+              <div
+                class="abt-body"
+              >
+                <img
+                  src="test-file-stub"
+                />
+                <p>
+                  Select & vote your prefered candidate!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="footer-container-2"
+          >
+            <p>
+              Copyright © 2018, Raymond Akalonu.
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
-      <h1>
-        Welcome to Politico app....Heads up, It still under construction
-      </h1>
+    <div
+      class="custom-container"
+    >
+      <nav
+        class="row"
+      >
+        <div
+          class="logo-div"
+        >
+          <a
+            href="index.html"
+          >
+            <h1>
+              Politico
+            </h1>
+          </a>
+        </div>
+        <div
+          class="signup-signin-div"
+        >
+          <h4>
+            <a
+              href="signup.html"
+            >
+              Sign Up
+            </a>
+            <span
+              class="m-side"
+            >
+              |
+            </span>
+            <a
+              href="signin.html"
+            >
+              Login
+            </a>
+          </h4>
+        </div>
+      </nav>
+      <section
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="main-info col-100"
+          >
+            <h1>
+              Welcome to 
+              <span
+                class="logo"
+              >
+                Politico
+              </span>
+              , where the Citizens speak!
+            </h1>
+            <p>
+              What more could anyone ask for? It's convinient, free and transparent!
+            </p>
+            <a
+              href="signin.html"
+              id="bigRegisterBtn"
+            >
+              <span>
+                Get Started
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="footer-container"
+      >
+        <div
+          class="abt-header"
+        >
+          <h2>
+            How Do I Vote?
+          </h2>
+        </div>
+        <div
+          class="footer-item-container"
+        >
+          <div
+            class="align-3"
+          >
+            <div
+              class="abt-body"
+            >
+              <img
+                src="test-file-stub"
+              />
+              <p>
+                Click the Get Started button
+              </p>
+            </div>
+          </div>
+          <div
+            class="align-4"
+          >
+            <div
+              class="abt-body"
+            >
+              <img
+                src="test-file-stub"
+              />
+              <p>
+                Fill in your credentials in the designated fields
+              </p>
+            </div>
+          </div>
+          <div
+            class="align-3"
+          >
+            <div
+              class="abt-body"
+            >
+              <img
+                src="test-file-stub"
+              />
+              <p>
+                Select & vote your prefered candidate!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="footer-container-2"
+        >
+          <p>
+            Copyright © 2018, Raymond Akalonu.
+          </p>
+        </div>
+      </footer>
     </div>
   </div>,
   "debug": [Function],
