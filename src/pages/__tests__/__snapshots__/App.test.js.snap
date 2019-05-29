@@ -68,7 +68,7 @@ Object {
                 What more could anyone ask for? It's convinient, free and transparent!
               </p>
               <a
-                href="signin.html"
+                href="/signup"
                 id="bigRegisterBtn"
               >
                 <span>
@@ -209,7 +209,7 @@ Object {
               What more could anyone ask for? It's convinient, free and transparent!
             </p>
             <a
-              href="signin.html"
+              href="/signup"
               id="bigRegisterBtn"
             >
               <span>
