@@ -15,7 +15,7 @@ Object {
             class="logo-div"
           >
             <a
-              href="index.html"
+              href="/"
             >
               <h1>
                 Politico
@@ -27,7 +27,8 @@ Object {
           >
             <h4>
               <a
-                href="signup.html"
+                href="/signup"
+                style="text-decoration: none;"
               >
                 Sign Up
               </a>
@@ -37,7 +38,8 @@ Object {
                 |
               </span>
               <a
-                href="signin.html"
+                href="/login"
+                style="text-decoration: none;"
               >
                 Login
               </a>
@@ -154,7 +156,7 @@ Object {
           class="logo-div"
         >
           <a
-            href="index.html"
+            href="/"
           >
             <h1>
               Politico
@@ -166,7 +168,8 @@ Object {
         >
           <h4>
             <a
-              href="signup.html"
+              href="/signup"
+              style="text-decoration: none;"
             >
               Sign Up
             </a>
@@ -176,7 +179,8 @@ Object {
               |
             </span>
             <a
-              href="signin.html"
+              href="/login"
+              style="text-decoration: none;"
             >
               Login
             </a>
