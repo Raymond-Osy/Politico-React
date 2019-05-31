@@ -1,11 +1,55 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import ReduxToastr from 'react-redux-toastr';
 import { Link } from 'react-router-dom';
+import { signup } from '../../state/auth/action';
 import './Signup.scss';
 import TopNav from '../../components/Navigations/TopNav/TopNav';
+import validateSignupInput from '../../utils/userValidator';
 
-const Signup = () => (
-    <div className="custom-container">
-        <TopNav />
+export const Signup = props => {
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    othername: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phoneNumber: '09099999999',
+    passportUrl: 'https://picsum.photos/200/300'
+  });
+  useEffect(() => {
+    if (props.auth.signupSuccess === true) {
+      props.history.push('/userProfile');
+    }
+  });
+  const handleSubmit = event => {
+    event.preventDefault();
+    props.signup(formData);
+  };
+
+  const handleChange = event => {
+    event.preventDefault();
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const { firstname, lastname, othername, email, password, confirmPassword } = formData;
+  return (
+    <div className="custom-container signup-page">
+      <ReduxToastr
+        timeOut={5000}
+        newestOnTop={false}
+        preventDuplicates
+        position="top-right"
+        transitionIn="fadeIn"
+        transitionOut="fadeOut"
+        progressBar
+        closeOnToastrClick
+      />
+
+      <TopNav />
         <section className="container">
             <div className="row">
                 <div className="main-info col-100 pt-0 bottom-space-15">
@@ -13,34 +57,33 @@ const Signup = () => (
                 </div>
             </div>
         </section>
-
         <footer className="footer-container-form">
-            <form className="container" id="signupForm" role="form" method="POST">
+            <form className="container" onSubmit={handleSubmit}>
                 <div className="form-container">
-                    <span id="success"></span>
+                  {/* {props.auth.signupFailure && <div className="error-message">{props.auth.signupError.error}</div>} */}
                     <label><b>First Name</b></label>
                     <span id="invalidF"></span>
-                    <input type="text" id="fName" placeholder="Enter First Name" name="fname" required/>
+                    <input type="text" placeholder="Enter First Name" name="firstname" onChange={handleChange} value={firstname} required />
 
                     <label><b>Last Name</b></label>
                     <span id="invalidL"></span>
-                    <input type="text" id="lName"placeholder="Enter Last Name" name="lname" required/>
+                    <input type="text" placeholder="Enter Last Name" name="lastname" onChange={handleChange} value={lastname} required />
 
                     <label><b>Other Name</b></label>
                     <span id="invalidO"></span>
-                    <input type="text" id="oName"placeholder="Enter Other Name" name="oname" required/>
+                    <input type="text" placeholder="Enter Other Name" name="othername" onChange={handleChange} value={othername} required />
 
                     <label><b>Email Address</b></label>
                     <span id="invalidE"></span>
-                    <input type="email" id="email" placeholder="Enter Email Address" name="email" required/>
+                    <input type="email" placeholder="Enter Email Address" name="email" onChange={handleChange} value={email} required />
 
                     <label><b>Password</b></label>
                     <span id="invalidP"></span>
-                    <input type="password" id="password" placeholder="Enter Password" name="psw" required/>
+                    <input type="password" placeholder="Enter Password" name="password" onChange={handleChange} value={password} required />
 
                     <label><b>Confirm Password</b></label>
                     <span id="confirmPass"></span>
-                    <input type="password" id="cPassword" placeholder="Confirm Password" name="psw" required/>
+                    <input type="password" placeholder="Confirm Password" name="confirmPassword" onChange={handleChange} value={confirmPassword} required />
 
                     <button className="btn-form" type="submit">Signup</button>
                     <p className="text-center">Already have an account? login <Link to={'/login'} style={{ color: '#2F7A17', textDecoration: 'none' }}>here</Link></p>
@@ -51,6 +94,16 @@ const Signup = () => (
             </div>
         </footer>
     </div>
-);
+  );
+};
 
-export default Signup;
+Signup.propTypes = {
+  singup: PropTypes.func,
+  auth: PropTypes.object
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export const ConnectedSignup = connect(mapStateToProps, { signup },)(Signup);
