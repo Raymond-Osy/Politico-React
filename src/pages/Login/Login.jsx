@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { login } from '../../state/auth/action';
 import './Login.scss';
 import TopNav from '../../components/Navigations/TopNav/TopNav';
 
-const Login = () => (
+export const Login = props => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  });
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    props.login(formData);
+  };
+
+  const handleChange = event => {
+    event.preventDefault();
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const { email, password } = formData;
+  return (
     <div className="custom-container">
         <TopNav />
         <section className="container">
@@ -15,14 +34,15 @@ const Login = () => (
         </section>
 
         <footer className="footer-container-form">
-            <form className="container" id="signinForm" role="form" method="POST">
+        {console.log('>>>>>>>>>>>>>>>>', props)}
+            <form className="container" id="signinForm" onSubmit={handleSubmit}>
                 <div className="form-container">
                     <span id="response"></span>
                     <label><b>Email Address</b></label>
-                    <input type="email" id="email" placeholder="Enter Email Address" name="uname" required/>
+                    <input type="email" placeholder="Enter Email Address" name="email" onChange={handleChange} value={email} required/>
 
                     <label><b>Password</b></label>
-                    <input type="password" id="password" placeholder="Enter Password" name="psw" required/>
+                    <input type="password" placeholder="Enter Password" name="password" onChange={handleChange} value={password} required/>
 
                     <button className="btn-form" type="submit">Signin</button>
                     <p>Don't have an account? Signup <Link to="/signup" style={{ color: '#2F7A17', textDecoration: 'none' }}>here</Link></p>
@@ -37,6 +57,12 @@ const Login = () => (
             </div>
         </footer>
     </div>
-);
+  );
+};
 
-export default Login;
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export const ConnectedLogin = connect(mapStateToProps, { login },)(Login);

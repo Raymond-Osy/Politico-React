@@ -1,6 +1,6 @@
 import { initialState } from './state';
 import {
-  SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE,
+  SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE, LOADING, LOGIN_SUCCESS, LOGIN_FAILURE
 } from './actionTypes';
 
 export default (state = initialState, action) => {
@@ -22,6 +22,23 @@ export default (state = initialState, action) => {
         ...state,
         signupFailure: true,
         signupError: action.payload.response.data
+      };
+    case LOADING:
+      return {
+        ...state,
+        loginLoading: true,
+        loginSuccess: false,
+        loginFailure: false,
+      };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        loginSuccess: true,
+      };
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        loginFailure: true,
       };
     default:
       return state;
