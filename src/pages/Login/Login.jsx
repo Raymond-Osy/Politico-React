@@ -10,12 +10,10 @@ export const Login = props => {
     email: '',
     password: ''
   });
-
   const handleSubmit = event => {
     event.preventDefault();
     props.login(formData);
   };
-
   const handleChange = event => {
     event.preventDefault();
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -34,7 +32,6 @@ export const Login = props => {
         </section>
 
         <footer className="footer-container-form">
-        {console.log('>>>>>>>>>>>>>>>>', props)}
             <form className="container" id="signinForm" onSubmit={handleSubmit}>
                 <div className="form-container">
                     <span id="response"></span>

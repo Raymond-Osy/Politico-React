@@ -1,8 +1,6 @@
-/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import ReduxToastr from 'react-redux-toastr';
 import { Link } from 'react-router-dom';
 import { signup } from '../../state/auth/action';
 import './Signup.scss';
@@ -21,7 +19,7 @@ export const Signup = props => {
     passportUrl: 'https://picsum.photos/200/300'
   });
   useEffect(() => {
-    if (props.auth.signupSuccess === true) {
+    if (props.auth.loginSuccess === true) {
       props.history.push('/userProfile');
     }
   });
@@ -29,26 +27,13 @@ export const Signup = props => {
     event.preventDefault();
     props.signup(formData);
   };
-
   const handleChange = event => {
     event.preventDefault();
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
-
   const { firstname, lastname, othername, email, password, confirmPassword } = formData;
   return (
     <div className="custom-container signup-page">
-      <ReduxToastr
-        timeOut={5000}
-        newestOnTop={false}
-        preventDuplicates
-        position="top-right"
-        transitionIn="fadeIn"
-        transitionOut="fadeOut"
-        progressBar
-        closeOnToastrClick
-      />
-
       <TopNav />
         <section className="container">
             <div className="row">
@@ -60,30 +45,29 @@ export const Signup = props => {
         <footer className="footer-container-form">
             <form className="container" onSubmit={handleSubmit}>
                 <div className="form-container">
-                  {/* {props.auth.signupFailure && <div className="error-message">{props.auth.signupError.error}</div>} */}
                     <label><b>First Name</b></label>
                     <span id="invalidF"></span>
-                    <input type="text" placeholder="Enter First Name" name="firstname" onChange={handleChange} value={firstname} required />
+                    <input type="text" placeholder="Enter First Name" name="firstname" onChange={handleChange} value={firstname} />
 
                     <label><b>Last Name</b></label>
                     <span id="invalidL"></span>
-                    <input type="text" placeholder="Enter Last Name" name="lastname" onChange={handleChange} value={lastname} required />
+                    <input type="text" placeholder="Enter Last Name" name="lastname" onChange={handleChange} value={lastname} />
 
                     <label><b>Other Name</b></label>
                     <span id="invalidO"></span>
-                    <input type="text" placeholder="Enter Other Name" name="othername" onChange={handleChange} value={othername} required />
+                    <input type="text" placeholder="Enter Other Name" name="othername" onChange={handleChange} value={othername} />
 
                     <label><b>Email Address</b></label>
                     <span id="invalidE"></span>
-                    <input type="email" placeholder="Enter Email Address" name="email" onChange={handleChange} value={email} required />
+                    <input type="email" placeholder="Enter Email Address" name="email" onChange={handleChange} value={email} />
 
                     <label><b>Password</b></label>
                     <span id="invalidP"></span>
-                    <input type="password" placeholder="Enter Password" name="password" onChange={handleChange} value={password} required />
+                    <input type="password" placeholder="Enter Password" name="password" onChange={handleChange} value={password} />
 
                     <label><b>Confirm Password</b></label>
                     <span id="confirmPass"></span>
-                    <input type="password" placeholder="Confirm Password" name="confirmPassword" onChange={handleChange} value={confirmPassword} required />
+                    <input type="password" placeholder="Confirm Password" name="confirmPassword" onChange={handleChange} value={confirmPassword} />
 
                     <button className="btn-form" type="submit">Signup</button>
                     <p className="text-center">Already have an account? login <Link to={'/login'} style={{ color: '#2F7A17', textDecoration: 'none' }}>here</Link></p>
