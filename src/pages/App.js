@@ -9,6 +9,7 @@ import { ConnectedLogin } from './Login/Login';
 import UserProfile from './Profile/User/Profile';
 import Elect from './Vote/Vote';
 import ElectionResult from './Result/Result';
+import Aspirant from './Aspirant/Aspirant';
 
 
 const notFound = () => (<h1>Not found</h1>);
@@ -21,6 +22,7 @@ const App = () => (
             <Route exact path="/userProfile" component={UserProfile} />
             <Route exact path="/vote" component={Elect} />
             <Route exact path="/result" component={ElectionResult} />
+            <Route exact path="/aspirant" component={Aspirant} />
             <Route component={notFound} />
         </Switch>
     </Router>
