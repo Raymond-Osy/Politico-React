@@ -11,11 +11,11 @@ const Aspirant = () => (
                     </div>
                 </div>
                 <div className="pt-150"></div>
-                <div className="container pt-100">
+                <div className="aspirant-container pt-100">
                     <form action="#">
                         <div className="row">
                             <div className="col-25">
-                                <label for="lname">Party</label>
+                                <label>Party</label>
                             </div>
                             <div className="col-75">
                                 <select id="types" name="type">
@@ -28,7 +28,7 @@ const Aspirant = () => (
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label for="lname">Office</label>
+                                <label>Office</label>
                             </div>
                             <div className="col-75">
                                 <select id="types" name="type">
@@ -46,7 +46,7 @@ const Aspirant = () => (
                   </div>
             </div>
 
-            <div class="footer mt-200" >
+            <div className="footer mt-200" >
                 <p>Copyright &copy; 2019, Raymond Akalonu.</p>
             </div>
         </div>

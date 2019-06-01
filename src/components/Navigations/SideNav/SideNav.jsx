@@ -1,13 +1,13 @@
 import React from 'react';
 import './SideNav.scss';
+import { Link } from 'react-router-dom';
 import profileImg from '../../../asset/img/icon1.png';
-// ;import { Link } from 'react-router-dom';
 
 const Sidebar = () => (
     <div className="sidebar">
         <div className="center">
             <div className = "nav-header">
-                <a href="index.html">Politico</a>
+            <Link to={'/'}><h1>Politico</h1></Link>
             </div>
             <div className="name-circle">
                 <img className="profile-img" src={profileImg} />
@@ -16,11 +16,11 @@ const Sidebar = () => (
         </div>
 
         <div className="sb-links">
-            <a href="userParty.html" className="active">Profile</a>
-            <a href="vote.html">Vote Here</a>
-            <a href="result.html">Result</a>
-            <a href="aspirant.html">Aspirant</a>
-            <a href="signin.html"><span className="danger">Logout</span></a>
+            <Link to={'/userProfile'}>Profile</Link>
+            <Link to={'/vote'}>Vote Here</Link>
+            <Link to={'/result'}>Result</Link>
+            <Link to={'/aspirant'}>Aspirant</Link>
+            <Link to={'/login'}><span className="danger">Logout</span></Link>
         </div>
     </div>
 );
