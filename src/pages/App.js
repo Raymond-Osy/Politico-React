@@ -7,6 +7,7 @@ import Home from './Home/Home';
 import { ConnectedSignup } from './Signup/Signup';
 import { ConnectedLogin } from './Login/Login';
 import UserProfile from './Profile/User/Profile';
+import Elect from './Vote/Vote';
 
 
 const notFound = () => (<h1>Not found</h1>);
@@ -17,6 +18,7 @@ const App = () => (
             <Route exact path="/login" component={ConnectedLogin} />
             <Route exact path="/signup" component={ConnectedSignup} />
             <Route exact path="/userProfile" component={UserProfile} />
+            <Route exact path="/vote" component={Elect} />
             <Route component={notFound} />
         </Switch>
     </Router>

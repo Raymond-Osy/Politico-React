@@ -1,9 +1,28 @@
 @import '../../asset/scss/position';
 
+/* BODY NAVIGATION BAR */
+.img-size {
+    height: 25px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.col-10 {
+    padding-top: 15px;
+    flex: 10%;
+}
+.pt-20 {
+    padding-top: 25px;
+}
+.centered {
+    text-align: center;
+}
+
+/* MAIN CONTENT */
 .container {
     width: 80%;
     margin: auto;
-    // overflow: hidden;
     margin-top:10px;
     margin-bottom: 10px;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Content.scss';
-import PDPlogo from '../../asset/img/PDPlogo.jpg';
-import sdplogo from '../../asset/img/sdplogo.png';
+import './Party.scss';
+import PDPlogo from '../../../asset/img/PDPlogo.jpg';
+import sdplogo from '../../../asset/img/sdplogo.png';
 
-const Content = () => (
+const Party = () => (
     <div className="content">
         <div className="content-wrapper">
             <div className="menu-text">
@@ -12,8 +12,6 @@ const Content = () => (
                     <h2>All Available Parties</h2>
                 </div>
             </div>
-
-
             <div className="card-group">
                 <div className="card">
                     <img className="img-responsive" src={PDPlogo} alt="Party Image"/>
@@ -22,7 +20,6 @@ const Content = () => (
                         <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
                     </div>
                 </div>
-
                 <div className="card">
                     <img className="img-responsive" src={sdplogo} alt="Party Image"/>
                     <div className="party-info">
@@ -66,4 +63,4 @@ const Content = () => (
     </div>
 );
 
-export default Content;
+export default Party;
