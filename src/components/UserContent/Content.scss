@@ -1,0 +1,547 @@
+@import '../../asset/scss/position';
+
+.container {
+    width: 80%;
+    margin: auto;
+    // overflow: hidden;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logo {
+    color:  #2f7a17;
+    font-weight: bold;
+}
+.main-info h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000;
+}
+.main-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #000;
+}
+.main-info a {
+    display: inline-block;
+    background-color: #2f7a17;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: 25%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.main-info a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.main-info a span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.main-info a:hover span {
+    padding-right: 25px;
+}
+  
+.main-info a:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* MAIN CONTENT */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    padding: 8px;
+    margin: 10px 0px;
+}
+
+/* CARDS */
+.card {
+    flex: 0 1 26%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 100px;
+    min-height: 130px;
+}
+.card button {
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: "Nunito", sans-serif;
+}
+.card button:hover {
+    opacity: 0.7;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.img-responsive {
+    display: block;
+	border: 0;
+	width: 100%;
+	height: 150px;
+}
+.party-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 75%;
+    text-align: left;
+}
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 75%;
+}
+.modify-btn {
+    flex: 50%;
+    text-align: center;
+    margin: 0 5px;
+}
+.card > p {
+    text-align: start;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.menu-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.text-center {
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+}
+.line {
+    padding: 0px 100px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #252525;
+}
+
+/* BUTTONS */
+.add-btn {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.6;
+}
+.btn-action {
+    display: inline-block;
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 2px 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+  }
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-150 {
+    margin-top: 150px;
+}
+.mt-200 {
+    margin-top: 200px;
+}
+.pt-150 {
+    padding-top: 150px;
+}
+.mr-80 {
+    margin-right: 80px;
+}
+.ml-20 {
+    margin-left: 230px;
+}
+.menu-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.text-center {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.line {
+    padding: 0px 100px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #252525;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+/* Collapsible Buttons */
+.collapse-btns {
+    padding: 5px 100px;
+}
+.collapse-btn {
+    margin-top: 10px;
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+#table-content {
+    overflow-x: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+#table-content td, #table-content th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.won {
+    color: #2f7a17;
+    font-size: bold;
+} 
+.collapse-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+.collapse-btn:hover {
+    background-color: #555;
+}
+.collapse-btn:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.on:after {
+    content: "\2212";
+}
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.pagination a {
+    color: #000;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    height: 70px;
+    color: #000;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    /* margin-top: 20px; */
+}
+
+/* FORM - FOR OFFICE PAGE */
+  input[type=text], select, textarea {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+} 
+input[type=submit] {
+    background-color: #2f7a17;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.container {
+    width: 70%;
+    margin: 17px auto; 
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+.btn-container {
+    width: 70%;
+    margin: 0 auto; 
+}
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+  /* Clear floats after the columns */
+.row-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* The Modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 250px;
+    padding-left: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  .confirm {
+      color: #ffffff;
+      border: none;
+      padding: 5px;
+      width: 70px;
+      font-size: 19px;
+  }
+  /* Modal Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-header {
+  text-align: center;
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  .modal-body {padding: 2px 16px;}
+  
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    .collapse-btns {
+        padding: 2px 15px;
+    }
+}
+
+
+/* COLORS*/
+.danger {
+    color: #ff7171;
+}
+.bg-danger {
+    background-color: #ff7171;
+}
+.warning {
+    color: #ffbd00;
+}
+.bg-warning {
+    background-color: #ffbd00;
+}
+.success {
+    color: #2f7a17;
+}
+.bg-success {
+    background-color: #2f7a17;
+}
+.cool {
+    color: #007bff;
+}
+.bg-cool {
+    background-color: #007bff;
+}
+.bg-white {
+    background-color: #fff;
+}
+.grey{
+    color: grey;
+}
+
+/* FOR LOWER SCREEN SIZES */
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+    }
+    .sidebar a {
+        float: left;
+    }
+    .sidebar a.active {
+        border-left: 0px;
+        border-bottom: 3px solid #2f7a17;
+    }
+    div.content {
+        padding-top: 150px;
+        margin-left: 0;
+    }
+    .name-circle {
+        display: none;
+    }
+    .d-none {
+        display: none;
+    }
+    .text-center {
+        font-size: 75%;
+    }
+    .line {
+        padding: 0px 75px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #252525;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+    .sidebar a.active {
+        border-left: 0px;
+        border-bottom: 0px;
+    }
+    div.content {
+        padding-top: 400px;
+        margin-left: 0;
+    }
+}
+  
+@media screen and (max-width: 400px) {
+    .text-center {
+        font-size: 75%;
+    }
+    .line {
+        padding: 0px 75px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #252525;
+    }
+    .card {
+        flex: 0 1 100%;
+    }
+    .modal {
+        padding-top: 200px;
+        padding-left: 0px;
+    }
+    .confirm {
+        padding: 4px;
+        width: 60px;
+        font-size: 17px;
+    }
+}

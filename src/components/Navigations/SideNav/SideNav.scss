@@ -1,0 +1,76 @@
+@import '../../../asset/scss/variables';
+@import '../../../asset/fonts';
+
+body {
+    background-color: #EBEFF2;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+}
+.sidebar a {
+    display: block;
+    color: #000000;
+    padding: 16px;
+    text-decoration: none;
+}
+.sidebar a.active {
+    border-left: 3px solid #2f7a17;
+    background-color: #F1F2F2;
+    transition: background-color 0.5s;
+    color: #2f7a17;
+}
+.sb-links a:hover {
+    background-color: #F1F2F2;
+    color: #2f7a17;
+}
+.link {
+    color: #000;
+}
+div.content {
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 100%;
+}
+.nav-header {
+    padding: 5px;
+    padding-left: 25px;
+    flex-grow: 8;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+.logo:hover {
+    background-color: inherit; 
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.name-circle {
+    text-align: center;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-img {
+    width: 100%;
+    height: auto;
+}
+.danger {
+    color: $secondary-color;
+}
