@@ -4,6 +4,9 @@
 .col-100 {
     flex: 100%;
 }
+.col-90 {
+    flex: 90%;
+}
 .col-75 {
     flex: 75%;
 }
@@ -24,6 +27,9 @@
 }
 .col-25 {
     flex: 25%;
+}
+.col-10 {
+    flex: 10%;
 }
 .left {
     justify-content: flex-start;

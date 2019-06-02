@@ -16,11 +16,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         signupSuccess: true,
+        signupLoading: false,
       };
     case SIGNUP_FAILURE:
       return {
         ...state,
         signupFailure: true,
+        signupLoading: false,
         signupError: action.payload.response.data
       };
     case LOADING:
@@ -34,11 +36,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loginSuccess: true,
+        loginLoading: false,
       };
     case LOGIN_FAILURE:
       return {
         ...state,
         loginFailure: true,
+        loginLoading: false,
       };
     default:
       return state;

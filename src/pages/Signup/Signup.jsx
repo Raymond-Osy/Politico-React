@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import ReduxToastr from 'react-redux-toastr';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
@@ -26,6 +27,15 @@ export const Signup = props => {
   });
   return (
     <div className="custom-container signup-page">
+      <ReduxToastr
+        timeOut={5000}
+        newestOnTop={false}
+        preventDuplicates
+        position="top-right"
+        transitionIn="fadeIn"
+        transitionOut="fadeOut"
+        progressBar
+        closeOnToastrClick/>
       <TopNav />
         <section className="container">
             <div className="row">

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Profile.scss';
 import ReduxToastr from 'react-redux-toastr';
-// import { Link } from 'react-router-dom';
-
+import Sidebar from '../../../components/Navigations/SideNav/SideNav';
+import Party from '../../../components/UserContent/Party/Party';
 
 const UserProfile = () => (
-      <div>
+    <div>
         <ReduxToastr
         timeOut={5000}
         newestOnTop={false}
@@ -15,8 +15,8 @@ const UserProfile = () => (
         transitionOut="fadeOut"
         progressBar
         closeOnToastrClick/>
-
-        <h2>Welcome to this Page, this should be the USERS PAGE on authentication</h2>
+        <Sidebar />
+        <Party />
     </div>
 );
 
