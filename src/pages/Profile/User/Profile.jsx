@@ -6,6 +6,15 @@ import Party from '../../../components/UserContent/Party/Party';
 
 const UserProfile = () => (
     <div>
+        <ReduxToastr
+        timeOut={5000}
+        newestOnTop={false}
+        preventDuplicates
+        position="top-right"
+        transitionIn="fadeIn"
+        transitionOut="fadeOut"
+        progressBar
+        closeOnToastrClick/>
         <Sidebar />
         <Party />
     </div>

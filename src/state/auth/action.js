@@ -15,9 +15,9 @@ export const signup = userData => async dispatch => {
       type: SIGNUP_SUCCESS,
       payload: decodedToken
     });
+    toastr.success('Success', 'Your registration was successful!');
     setLocalStorage('users-token', token);
     setAxiosHeader(token);
-    toastr.success('Success', 'Signup Success');
   } catch (err) {
     dispatch({
       type: SIGNUP_FAILURE,
@@ -39,6 +39,7 @@ export const login = formData => async dispatch => {
       type: LOGIN_SUCCESS,
       payload: decoded
     });
+    toastr.success('Success', 'Account verification was successful!');
     setLocalStorage('users-token', token);
     setAxiosHeader(token);
   } catch (err) {
@@ -46,6 +47,6 @@ export const login = formData => async dispatch => {
       type: LOGIN_FAILURE,
       payload: err
     });
-    toastr.error('Error', err.response.data.error);
+    toastr.error('Error', err.response.data.message);
   }
 };
