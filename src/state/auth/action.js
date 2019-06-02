@@ -27,7 +27,7 @@ export const signup = userData => async dispatch => {
   }
 };
 
-export const login = (formData, redirect) => async dispatch => {
+export const login = formData => async dispatch => {
   try {
     dispatch({
       type: LOADING,
@@ -41,10 +41,9 @@ export const login = (formData, redirect) => async dispatch => {
     });
     setLocalStorage('users-token', token);
     setAxiosHeader(token);
-    redirect.push('/userProfile');
   } catch (err) {
     dispatch({
-      type: SIGNUP_FAILURE,
+      type: LOGIN_FAILURE,
       payload: err
     });
     toastr.error('Error', err.response.data.error);
