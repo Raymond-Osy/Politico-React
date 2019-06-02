@@ -1,17 +1,16 @@
 const express = require('express');
 const path = require('path');
 
-const port = process.env.PORT || 3000;
 const app = express();
+const port = (process.env.PORT) || 5000;
 
-// the __dirname is the current directory from where the script is running
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '/dist')));
 
-// send the user to index html page inspite of the url
-app.use('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist/index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log('server started!');
+const server = app.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Listening on port ${server.address().port}`);
 });

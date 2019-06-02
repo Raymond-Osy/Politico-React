@@ -4,8 +4,8 @@ import {
 } from 'react-router-dom';
 import ReduxToastr from 'react-redux-toastr';
 import Home from './Home/Home';
-import Login from './Login/Login';
-import { ConnectedSignup, Signup } from './Signup/Signup';
+import { ConnectedSignup } from './Signup/Signup';
+import { ConnectedLogin } from './Login/Login';
 import UserProfile from './Profile/User/Profile';
 
 
@@ -14,7 +14,7 @@ const App = () => (
     <Router>
         <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/login" component={ConnectedLogin} />
             <Route exact path="/signup" component={ConnectedSignup} />
             <Route exact path="/userProfile" component={UserProfile} />
             <Route component={notFound} />
