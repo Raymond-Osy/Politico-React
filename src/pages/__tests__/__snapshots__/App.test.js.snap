@@ -103,70 +103,90 @@ Object {
             </div>
           </div>
         </section>
-        <footer
-          class="footer-container"
-        >
-          <div
-            class="abt-header"
-          >
-            <h2>
-              How Do I Vote?
-            </h2>
-          </div>
-          <div
-            class="footer-item-container"
+        <div>
+          <footer
+            class="footer-container"
           >
             <div
-              class="align-3"
+              class="item-postion-2"
             >
               <div
-                class="abt-body"
+                class="align-one"
               >
-                <img
-                  src="test-file-stub"
-                />
-                <p>
-                  Click the Get Started button
-                </p>
+                <div
+                  class="abt-body"
+                >
+                  <img
+                    src="test-file-stub"
+                  />
+                </div>
+              </div>
+              <div
+                class="align-two"
+              >
+                <div
+                  class="abt-body"
+                >
+                  <p>
+                    Fill in your credentials in the designated fieldsFill in your credentials in the designated fiated fields. Fill in your credentials in the designated fieldsFill in your credentials in the designated fields.
+                  </p>
+                </div>
               </div>
             </div>
             <div
-              class="align-4"
+              class="item-postion-2"
             >
               <div
-                class="abt-body"
+                class="align-one"
               >
-                <img
-                  src="test-file-stub"
-                />
-                <p>
-                  Fill in your credentials in the designated fields
-                </p>
+                <div
+                  class="abt-body"
+                >
+                  <p>
+                    Fill in your credentials in the designated fieldsFill in your credentials in the designated fiated fields. Fill in your credentials in the designated fieldsFill in your credentials in the designated fields.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="align-two"
+              >
+                <div
+                  class="abt-body"
+                >
+                  <img
+                    src="test-file-stub"
+                  />
+                </div>
               </div>
             </div>
             <div
-              class="align-3"
+              class="item-postion-2"
             >
               <div
-                class="abt-body"
+                class="align-one"
               >
-                <img
-                  src="test-file-stub"
-                />
-                <p>
-                  Select & vote your prefered candidate!
-                </p>
+                <div
+                  class="abt-body"
+                >
+                  <img
+                    src="test-file-stub"
+                  />
+                </div>
+              </div>
+              <div
+                class="align-two"
+              >
+                <div
+                  class="abt-body"
+                >
+                  <p>
+                    Fill in your credentials in the designated fieldsFill in your credentials in the designated fiated fields. Fill in your credentials in the designated fieldsFill in your credentials in the designated fields.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="footer-container-2"
-          >
-            <p>
-              Copyright © 2018, Raymond Akalonu.
-            </p>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
     </div>
   </body>,
@@ -269,70 +289,90 @@ Object {
           </div>
         </div>
       </section>
-      <footer
-        class="footer-container"
-      >
-        <div
-          class="abt-header"
-        >
-          <h2>
-            How Do I Vote?
-          </h2>
-        </div>
-        <div
-          class="footer-item-container"
+      <div>
+        <footer
+          class="footer-container"
         >
           <div
-            class="align-3"
+            class="item-postion-2"
           >
             <div
-              class="abt-body"
+              class="align-one"
             >
-              <img
-                src="test-file-stub"
-              />
-              <p>
-                Click the Get Started button
-              </p>
+              <div
+                class="abt-body"
+              >
+                <img
+                  src="test-file-stub"
+                />
+              </div>
+            </div>
+            <div
+              class="align-two"
+            >
+              <div
+                class="abt-body"
+              >
+                <p>
+                  Fill in your credentials in the designated fieldsFill in your credentials in the designated fiated fields. Fill in your credentials in the designated fieldsFill in your credentials in the designated fields.
+                </p>
+              </div>
             </div>
           </div>
           <div
-            class="align-4"
+            class="item-postion-2"
           >
             <div
-              class="abt-body"
+              class="align-one"
             >
-              <img
-                src="test-file-stub"
-              />
-              <p>
-                Fill in your credentials in the designated fields
-              </p>
+              <div
+                class="abt-body"
+              >
+                <p>
+                  Fill in your credentials in the designated fieldsFill in your credentials in the designated fiated fields. Fill in your credentials in the designated fieldsFill in your credentials in the designated fields.
+                </p>
+              </div>
+            </div>
+            <div
+              class="align-two"
+            >
+              <div
+                class="abt-body"
+              >
+                <img
+                  src="test-file-stub"
+                />
+              </div>
             </div>
           </div>
           <div
-            class="align-3"
+            class="item-postion-2"
           >
             <div
-              class="abt-body"
+              class="align-one"
             >
-              <img
-                src="test-file-stub"
-              />
-              <p>
-                Select & vote your prefered candidate!
-              </p>
+              <div
+                class="abt-body"
+              >
+                <img
+                  src="test-file-stub"
+                />
+              </div>
+            </div>
+            <div
+              class="align-two"
+            >
+              <div
+                class="abt-body"
+              >
+                <p>
+                  Fill in your credentials in the designated fieldsFill in your credentials in the designated fiated fields. Fill in your credentials in the designated fieldsFill in your credentials in the designated fields.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="footer-container-2"
-        >
-          <p>
-            Copyright © 2018, Raymond Akalonu.
-          </p>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   </div>,
   "debug": [Function],
