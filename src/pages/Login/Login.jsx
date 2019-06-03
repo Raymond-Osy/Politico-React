@@ -16,11 +16,12 @@ export const Login = props => {
   };
   useEffect(() => {
     if (props.auth.loginSuccess === true) {
-      props.history.push('/userProfile');
+      props.history.push('/parties');
     }
   });
   return (
     <div className="custom-container">
+        <TopNav />
         <ReduxToastr
           timeOut={5000}
           newestOnTop={false}
@@ -30,7 +31,6 @@ export const Login = props => {
           transitionOut="fadeOut"
           progressBar
           closeOnToastrClick/>
-        <TopNav />
         <section className="container">
             <div className="row">
                 <div className="main-info col-100 pt-0">
@@ -42,7 +42,10 @@ export const Login = props => {
         <footer className="footer-container-form">
             <Formik
                 initialValues = {formData}
-                onSubmit={values => props.login(values)}
+                onSubmit={async (values, { setSubmitting }) => {
+                  await props.login(values);
+                  setSubmitting(false);
+                }}
                 validationSchema={Yup.object().shape({
                   email: Yup.string()
                     .email()

@@ -3,9 +3,9 @@ import Sidebar from '../../components/Navigations/SideNav/SideNav';
 import Vote from '../../components/UserContent/Vote/Vote';
 // import { Link } from 'react-router-dom';
 
-const Elect = () => (
+const Elect = props => (
     <div>
-        <Sidebar />
+        <Sidebar {...props}/>
         <Vote />
     </div>
 );
