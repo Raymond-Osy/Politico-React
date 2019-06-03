@@ -1,10 +1,10 @@
 import React from 'react';
-import './Profile.scss';
 import ReduxToastr from 'react-redux-toastr';
+import './Profile.scss';
 import Sidebar from '../../../components/Navigations/SideNav/SideNav';
-import Party from '../../../components/UserContent/Party/Party';
+import Parties from '../../../components/UserContent/Party/Party';
 
-const UserProfile = () => (
+const UserProfile = props => (
     <div>
         <ReduxToastr
         timeOut={5000}
@@ -15,8 +15,8 @@ const UserProfile = () => (
         transitionOut="fadeOut"
         progressBar
         closeOnToastrClick/>
-        <Sidebar />
-        <Party />
+        <Sidebar {...props}/>
+        <Parties {...props}/>
     </div>
 );
 

@@ -19,7 +19,7 @@ const App = () => (
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={ConnectedLogin} />
             <Route exact path="/signup" component={ConnectedSignup} />
-            <Route exact path="/userProfile" component={UserProfile} />
+            <Route exact path="/parties" component={UserProfile} />
             <Route exact path="/vote" component={Elect} />
             <Route exact path="/result" component={ElectionResult} />
             <Route exact path="/aspirant" component={Aspirant} />

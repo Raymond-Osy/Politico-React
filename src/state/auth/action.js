@@ -1,7 +1,7 @@
 import { toastr } from 'react-redux-toastr';
 import axios, { setAxiosHeader } from '../../lib/axios';
 import { decodeToken, setLocalStorage } from '../../lib/auth';
-import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE, LOADING, LOGIN_SUCCESS, LOGIN_FAILURE } from './actionTypes';
+import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE, LOADING, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from './actionTypes';
 
 export const signup = userData => async dispatch => {
   try {
@@ -47,6 +47,15 @@ export const login = formData => async dispatch => {
       type: LOGIN_FAILURE,
       payload: err
     });
-    toastr.error('Error', err.response.data.message);
+    toastr.error('Error', 'Incorrect email or password');
   }
+};
+
+export const signOutUser = redirect => async dispatch => {
+  localStorage.removeItem('users-token');
+  redirect.push('/');
+  await dispatch({
+    type: LOGOUT
+  });
+  toastr.success('Success', 'Logout successful, see you around!');
 };

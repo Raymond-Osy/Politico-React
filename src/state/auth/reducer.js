@@ -1,6 +1,6 @@
 import { initialState } from './state';
 import {
-  SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE, LOADING, LOGIN_SUCCESS, LOGIN_FAILURE
+  SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE, LOADING, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT
 } from './actionTypes';
 
 export default (state = initialState, action) => {
@@ -43,6 +43,12 @@ export default (state = initialState, action) => {
         ...state,
         loginFailure: true,
         loginLoading: false,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        loginSuccess: false,
+        signupSuccess: false
       };
     default:
       return state;

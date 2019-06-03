@@ -1,10 +1,25 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { partiesAction } from '../../../state/parties/action';
 import './Party.scss';
-import PDPlogo from '../../../asset/img/PDPlogo.jpg';
-import sdplogo from '../../../asset/img/sdplogo.png';
 
-const Party = () => (
+const Parties = props => {
+  useEffect(() => {
+    props.partiesAction();
+  }, []);
+
+  const renderParties = parties => parties.map(party => (
+        <div key={party.id} className="card">
+            <img className="img-responsive" src={party.logourl} alt="Party Image"/>
+            <div className="party-info">
+                <h3>Name: <span className="grey">{party.name}</span></h3>
+                <h3>Head Quarters: <span className="grey">{party.hqaddress}</span></h3>
+            </div>
+        </div>
+  ));
+  return (
     <div className="content">
         <div className="content-wrapper">
             <div className="menu-text">
@@ -13,54 +28,18 @@ const Party = () => (
                 </div>
             </div>
             <div className="card-group">
-                <div className="card">
-                    <img className="img-responsive" src={PDPlogo} alt="Party Image"/>
-                    <div className="party-info">
-                        <h3>Name: <span className="grey">PDP</span></h3>
-                        <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
-                    </div>
-                </div>
-                <div className="card">
-                    <img className="img-responsive" src={sdplogo} alt="Party Image"/>
-                    <div className="party-info">
-                        <h3>Name: <span className="grey">APC</span></h3>
-                        <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
-                    </div>
-                </div>
-                <div className="card">
-                    <img className="img-responsive" src={PDPlogo} alt="Party Image"/>
-                    <div className="party-info">
-                        <h3>Name: <span className="grey">APC</span></h3>
-                        <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
-                    </div>
-                </div>
-                <div className="card">
-                    <img className="img-responsive" src={sdplogo} alt="Party Image"/>
-                    <div className="party-info">
-                        <h3>Name: <span className="grey">APC</span></h3>
-                        <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
-                    </div>
-                </div>
-                <div className="card">
-                    <img className="img-responsive" src={PDPlogo} alt="Party Image"/>
-                    <div className="party-info">
-                        <h3>Name: <span className="grey">APC</span></h3>
-                        <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
-                    </div>
-                </div>
-                <div className="card">
-                    <img className="img-responsive" src={sdplogo} alt="Party Image"/>
-                    <div className="party-info">
-                        <h3>Name: <span className="grey">APC</span></h3>
-                        <h3>Head Quarters: <span className="grey">123, Akintola williams.</span></h3>
-                    </div>
-                </div>
+                {renderParties(props.parties)}
             </div>
         </div>
         <div className="footer">
             <p>Copyright &copy; 2019, Raymond Akalonu.</p>
         </div>
     </div>
-);
+  );
+};
 
-export default Party;
+const mapStateToProps = state => ({
+  parties: state.parties.parties,
+});
+
+export default connect(mapStateToProps, { partiesAction })(Parties);
