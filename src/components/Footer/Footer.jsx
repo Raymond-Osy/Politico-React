@@ -1,39 +1,60 @@
 import React from 'react';
 import './Footer.scss';
-import tap from '../../asset/img/tap.png';
-import consent from '../../asset/img/consent.png';
-import vote from '../../asset/img/vote.png';
+import archive from '../../asset/img/archive.svg';
+import balance from '../../asset/img/balance.svg';
+import campaign from '../../asset/img/campaign.svg';
 
 
 const Footer = () => (
+    <div>
     <footer className="footer-container">
-        <div className="abt-header">
-            <h2>How Do I Vote?</h2>
-        </div>
-        <div className="footer-item-container">
-            <div className="align-3">
+        <div className="item-postion-2">
+            <div className="align-one">
                 <div className="abt-body">
-                    <img src={tap}/>
-                    <p>Click the Get Started button</p>
+                    <img src={archive}/>
                 </div>
             </div>
-            <div className="align-4">
+            <div className="align-two">
                 <div className="abt-body">
-                    <img src={consent}/>
-                    <p>Fill in your credentials in the designated fields</p>
-                </div>
-            </div>
-            <div className="align-3">
-                <div className="abt-body">
-                    <img src={vote}/>
-                    <p>Select & vote your prefered candidate!</p>
+                    <p>Fill in your credentials in the designated fieldsFill in your credentials
+                        in the designated fiated fields. Fill in your credentials in the designated
+                        fieldsFill in your credentials in the designated fields.
+                    </p>
                 </div>
             </div>
         </div>
-        <div className="footer-container-2">
-                <p>Copyright &copy; 2018, Raymond Akalonu.</p>
+        <div className="item-postion-2">
+            <div className="align-one">
+                <div className="abt-body">
+                    <p>Fill in your credentials in the designated fieldsFill in your credentials
+                        in the designated fiated fields. Fill in your credentials in the designated
+                        fieldsFill in your credentials in the designated fields.
+                    </p>
+                </div>
             </div>
+            <div className="align-two">
+                <div className="abt-body">
+                    <img src={balance}/>
+                </div>
+            </div>
+        </div>
+        <div className="item-postion-2">
+            <div className="align-one">
+                <div className="abt-body">
+                    <img src={campaign}/>
+                </div>
+            </div>
+            <div className="align-two">
+                <div className="abt-body">
+                    <p>Fill in your credentials in the designated fieldsFill in your credentials
+                        in the designated fiated fields. Fill in your credentials in the designated
+                        fieldsFill in your credentials in the designated fields.
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
+    </div>
 );
 
 export default Footer;
