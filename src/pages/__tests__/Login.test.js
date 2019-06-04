@@ -7,7 +7,6 @@ import { mockStoreData } from '../../__mocks__/mockStore';
 import { Login } from '../Login/Login';
 
 const mockStore = reduxStore();
-
 const store = mockStore(mockStoreData);
 
 const props = {
@@ -28,4 +27,16 @@ test('should renders <Login /> component', () => {
   );
   expect(LoginComponent).toBeTruthy();
   expect(LoginComponent).toMatchSnapshot();
+});
+
+test('Renders <Login /> form', () => {
+  const { getByPlaceholderText } = render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <Login {...props} />
+    </BrowserRouter>)
+  </Provider>
+  );
+  expect(getByPlaceholderText('Enter Email Address')).toBeTruthy();
+  expect(getByPlaceholderText('Enter Password')).toBeTruthy();
 });

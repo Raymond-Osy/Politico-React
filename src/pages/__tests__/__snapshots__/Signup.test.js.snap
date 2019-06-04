@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the <signup /> component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="custom-container signup-page"
+      >
+        <nav
+          class="row"
+        >
+          <div
+            class="logo-div"
+          >
+            <a
+              href="/"
+            >
+              <h1>
+                Politico
+              </h1>
+            </a>
+          </div>
+          <div
+            class="signup-signin-div"
+          >
+            <h4>
+              <a
+                href="/signup"
+                style="text-decoration: none;"
+              >
+                Sign Up
+              </a>
+              <span
+                class="m-side"
+              >
+                |
+              </span>
+              <a
+                href="/login"
+                style="text-decoration: none;"
+              >
+                Login
+              </a>
+            </h4>
+          </div>
+        </nav>
+        <span
+          aria-live="assertive"
+          class="redux-toastr"
+        >
+          <span>
+            <div
+              class="top-left"
+            />
+            <div
+              class="top-right"
+            />
+            <div
+              class="top-center"
+            />
+            <div
+              class="bottom-left"
+            />
+            <div
+              class="bottom-right"
+            />
+            <div
+              class="bottom-center"
+            />
+          </span>
+        </span>
+        <section
+          class="container"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="main-info col-100 pt-0 bottom-space-15"
+            >
+              <h1>
+                <span>
+                  Signup
+                </span>
+              </h1>
+            </div>
+          </div>
+        </section>
+        <footer
+          class="footer-container-form"
+        >
+          <form
+            class="container"
+          >
+            <div
+              class="form-container"
+            >
+              <label>
+                <b>
+                  First Name
+                </b>
+              </label>
+              <input
+                name="firstname"
+                placeholder="Enter First Name"
+                required=""
+                type="text"
+                value=""
+              />
+              <label>
+                <b>
+                  Last Name
+                </b>
+              </label>
+              <input
+                name="lastname"
+                placeholder="Enter Last Name"
+                required=""
+                type="text"
+                value=""
+              />
+              <label>
+                <b>
+                  Other Name
+                </b>
+              </label>
+              <input
+                name="othername"
+                placeholder="Enter Other Name"
+                required=""
+                type="text"
+                value=""
+              />
+              <label>
+                <b>
+                  Email Address
+                </b>
+              </label>
+              <input
+                name="email"
+                placeholder="Enter Email Address"
+                required=""
+                type="email"
+                value=""
+              />
+              <label>
+                <b>
+                  Password
+                </b>
+              </label>
+              <input
+                name="password"
+                placeholder="Enter Password"
+                required=""
+                type="password"
+                value=""
+              />
+              <label>
+                <b>
+                  Confirm Password
+                </b>
+              </label>
+              <input
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                required=""
+                type="password"
+                value=""
+              />
+              <button
+                class="btn-form"
+                type="submit"
+              >
+                Signup
+              </button>
+              <p
+                class="text-center"
+              >
+                Already have an account? login 
+                <a
+                  href="/login"
+                  style="color: rgb(47, 122, 23); text-decoration: none;"
+                >
+                  here
+                </a>
+              </p>
+            </div>
+          </form>
+          <div
+            class="footer-container-2"
+          >
+            <p>
+              Copyright © 2019, Raymond Akalonu.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="custom-container signup-page"
+    >
+      <nav
+        class="row"
+      >
+        <div
+          class="logo-div"
+        >
+          <a
+            href="/"
+          >
+            <h1>
+              Politico
+            </h1>
+          </a>
+        </div>
+        <div
+          class="signup-signin-div"
+        >
+          <h4>
+            <a
+              href="/signup"
+              style="text-decoration: none;"
+            >
+              Sign Up
+            </a>
+            <span
+              class="m-side"
+            >
+              |
+            </span>
+            <a
+              href="/login"
+              style="text-decoration: none;"
+            >
+              Login
+            </a>
+          </h4>
+        </div>
+      </nav>
+      <span
+        aria-live="assertive"
+        class="redux-toastr"
+      >
+        <span>
+          <div
+            class="top-left"
+          />
+          <div
+            class="top-right"
+          />
+          <div
+            class="top-center"
+          />
+          <div
+            class="bottom-left"
+          />
+          <div
+            class="bottom-right"
+          />
+          <div
+            class="bottom-center"
+          />
+        </span>
+      </span>
+      <section
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="main-info col-100 pt-0 bottom-space-15"
+          >
+            <h1>
+              <span>
+                Signup
+              </span>
+            </h1>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="footer-container-form"
+      >
+        <form
+          class="container"
+        >
+          <div
+            class="form-container"
+          >
+            <label>
+              <b>
+                First Name
+              </b>
+            </label>
+            <input
+              name="firstname"
+              placeholder="Enter First Name"
+              required=""
+              type="text"
+              value=""
+            />
+            <label>
+              <b>
+                Last Name
+              </b>
+            </label>
+            <input
+              name="lastname"
+              placeholder="Enter Last Name"
+              required=""
+              type="text"
+              value=""
+            />
+            <label>
+              <b>
+                Other Name
+              </b>
+            </label>
+            <input
+              name="othername"
+              placeholder="Enter Other Name"
+              required=""
+              type="text"
+              value=""
+            />
+            <label>
+              <b>
+                Email Address
+              </b>
+            </label>
+            <input
+              name="email"
+              placeholder="Enter Email Address"
+              required=""
+              type="email"
+              value=""
+            />
+            <label>
+              <b>
+                Password
+              </b>
+            </label>
+            <input
+              name="password"
+              placeholder="Enter Password"
+              required=""
+              type="password"
+              value=""
+            />
+            <label>
+              <b>
+                Confirm Password
+              </b>
+            </label>
+            <input
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              required=""
+              type="password"
+              value=""
+            />
+            <button
+              class="btn-form"
+              type="submit"
+            >
+              Signup
+            </button>
+            <p
+              class="text-center"
+            >
+              Already have an account? login 
+              <a
+                href="/login"
+                style="color: rgb(47, 122, 23); text-decoration: none;"
+              >
+                here
+              </a>
+            </p>
+          </div>
+        </form>
+        <div
+          class="footer-container-2"
+        >
+          <p>
+            Copyright © 2019, Raymond Akalonu.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

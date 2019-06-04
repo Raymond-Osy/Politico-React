@@ -9,15 +9,14 @@ const Parties = props => {
   useEffect(() => {
     props.partiesAction();
   }, []);
-
   const renderParties = parties => parties.map(party => (
-        <div key={party.id} className="card">
-            <img className="img-responsive" src={party.logourl} alt="Party Image"/>
-            <div className="party-info">
-                <h3>Name: <span className="grey">{party.name}</span></h3>
-                <h3>Head Quarters: <span className="grey">{party.hqaddress}</span></h3>
-            </div>
+    <div key={party.id} className="card">
+        <img className="img-responsive" src={party.logourl} alt="Party Image"/>
+        <div className="party-info">
+            <h3>Name: <span className="grey">{party.name}</span></h3>
+            <h3>Head Quarters: <span className="grey">{party.hqaddress}</span></h3>
         </div>
+    </div>
   ));
   return (
     <div className="content">
